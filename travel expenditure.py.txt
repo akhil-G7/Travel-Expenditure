@@ -1,0 +1,241 @@
+from tkinter import *
+root=Tk()
+root.title("TRAVEL EXPENDITURE")
+root.configure(bg="light blue",padx=50,pady=100)
+Label(root,text='''*****Travel Expenditure***
+select the option to where you want to travel
+1-Hyderabad to Delhi
+2-Hyderabad to Pune
+3-Hyderabad to Goa
+4-Hyderabad to Benguluru
+5-Hyderabad to Kochi''',bg="light blue").pack()
+a1=Entry(root,width=50)
+a1.pack()
+def a2():
+    v1=int(a1.get())
+    if v1==1:
+        a3=IntVar()
+        def a4():
+            v2=int(a3.get())
+            if v2==1:
+                value=StringVar()
+                def a5():
+                    v3=str(value.get())
+                    if v3=='car':
+                        Label(root,text='''if it is petrol, then it would cost around	
+5,802/-
+if it is diesel, then it would cost around	
+5,270/-''',bg="light blue").pack()
+                    elif v3=='bus':
+                        Label(root,text='''if it is A.C bus, then it would cost around	
+3,650/-
+if it is NON-A.C bus, then it would cost around	
+2,750/-''',bg="light blue").pack()
+                    elif v3=='bike':
+                        Label(root,text="it would cost around 3,481.5/-",bg="light blue").pack()
+                    else:
+                        Label(root,text="select anything on list",bg="light blue").pack()
+                OptionMenu(root,value,"car","bus","bike").pack()
+                Button(root,text="click here",command=a5,bg="light blue").pack()
+            elif v2==2:
+                Label(root,text='''if it is A.C, then cost would be around	
+4,980/-
+if it is first class, then it would cost around	
+1,750/-
+if it is second class, then it would cost around	
+990/-''',bg="light blue").pack()
+            else:
+                Label(root,text='''if it is economy class, then it would cost around	
+4,762/-
+if it is business class, then it would cost around	
+23,944/-''',bg="light blue").pack()
+        Radiobutton(root,text="Roadway,which is about 1,582.5 km",variable=a3,value=1,command=a4,bg="light blue").pack()
+        Radiobutton(root, text="Railway,which is about 1,677.41 km", variable=a3, value=2,command=a4,bg="light blue").pack()
+        Radiobutton(root, text="Airway,which is about 1,253 km", variable=a3, value=3,command=a4,bg="light blue").pack()
+    elif v1 == 2:
+            a3 = IntVar()
+
+            def a4():
+                v2 = int(a3.get())
+                if v2 == 1:
+                    value = StringVar()
+
+                    def a5():
+                        v3 = str(value.get())
+                        if v3 == 'car':
+                            Label(root, text='''if it is petrol, then it would cost around	
+    2,087.61/-
+    if it is diesel, then it would cost around	
+    1,897.1/-''', bg="light blue").pack()
+                        elif v3 == 'bus':
+                            Label(root, text='''if it is A.C bus, then it would cost around	
+    1,200/-
+    if it is NON-A.C bus, then it would cost around	
+    750/-''', bg="light blue").pack()
+                        elif v3 == 'bike':
+                            Label(root, text="it would cost around 1,252.4/-", bg="light blue").pack()
+                        else:
+                            Label(root, text="select anything on list", bg="light blue").pack()
+
+                    OptionMenu(root, value, "car", "bike", "bus").pack()
+                    Button(root, text="click here", command=a5, bg="light blue").pack()
+                elif v2 == 2:
+                    Label(root, text='''if it is A.C, then cost would be around	
+    1,380/-
+    if it is first class, then it would cost around	
+    970/-
+    if it is second class, then it would cost around	
+    560/-''', bg="light blue").pack()
+                else:
+                    Label(root, text='''if it is economy class, then it would cost around	
+    3,499/-
+    if it is business class, then it would cost around	
+    48,360/-''', bg="light blue").pack()
+
+            Radiobutton(root, text="Roadway,which is about 569.2 km", variable=a3, value=1, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Railway,which is about 597 km", variable=a3, value=2, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Airway,which is about 504 km", variable=a3, value=3, command=a4,
+                        bg="light blue").pack()
+    elif v1 == 3:
+            a3 = IntVar()
+
+            def a4():
+                v2 = int(a3.get())
+                if v2 == 1:
+                    value = StringVar()
+
+                    def a5():
+                        v3 = str(value.get())
+                        if v3 == 'car':
+                            Label(root, text='''if it is petrol, then it would cost around	
+    2,533.66/-
+    if it is diesel, then it would cost around	
+    2,303.22/-''', bg="light blue").pack()
+                        elif v3 == 'bus':
+                            Label(root, text='''if it is A.C bus, then it would cost around	
+    1,140/-
+    if it is NON-A.C bus, then it would cost around	
+    860/-''', bg="light blue").pack()
+                        elif v3 == 'bike':
+                            Label(root, text="it would cost around 1,520.2/-", bg="light blue").pack()
+                        else:
+                            Label(root, text="select anything on list", bg="light blue").pack()
+
+                    OptionMenu(root, value, "car", "bike", "bus").pack()
+                    Button(root, text="click here", command=a5, bg="light blue").pack()
+                elif v2 == 2:
+                    Label(root, text='''if it is A.C, then cost would be around	
+    1,180/-
+    if it is first class, then it would cost around	
+    640/-
+    if it is second class, then it would cost around	
+    480/-''', bg="light blue").pack()
+                else:
+                    Label(root, text='''if it is economy class, then it would cost around	
+    3,560/-
+    if it is business class, then it would cost around	
+    35,802/-''', bg="light blue").pack()
+
+            Radiobutton(root, text="Roadway,which is about 691 km",variable=a3, value=1, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Railway,which is about 546 km", variable=a3, value=2, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Airway,which is about 530 km", variable=a3, value=3, command=a4,
+                        bg="light blue").pack()
+    elif v1 == 4:
+            a3 = IntVar()
+
+            def a4():
+                v2 = int(a3.get())
+                if v2 == 1:
+                    value = StringVar()
+
+                    def a5():
+                        v3 = str(value.get())
+                        if v3 == 'car':
+                            Label(root, text='''if it is petrol, then it would cost around	
+    2,546.72/-
+    if it is diesel, then it would cost around	
+    2,310.2/-''', bg="light blue").pack()
+                        elif v3 == 'bus':
+                            Label(root, text='''if it is A.C bus, then it would cost around	
+    1,899/-
+    if it is NON-A.C bus, then it would cost around	
+    900/-''', bg="light blue").pack()
+                        elif v3 == 'bike':
+                            Label(root, text="it would cost around 1,273.86/-", bg="light blue").pack()
+                        else:
+                            Label(root, text="select anything on list", bg="light blue").pack()
+
+                    OptionMenu(root, value, "car", "bike", "bus").pack()
+                    Button(root, text="click here", command=a5, bg="light blue").pack()
+                elif v2 == 2:
+                    Label(root, text='''if it is A.C, then cost would be around	
+    2,285/-
+    if it is first class, then it would cost around	
+    1,365/-
+    if it is second class, then it would cost around	
+    385/-''', bg="light blue").pack()
+                else:
+                    Label(root, text='''if it is economy class, then it would cost around	
+    2,612/-
+    if it is business class, then it would cost around	
+    26,221/-''', bg="light blue").pack()
+
+            Radiobutton(root, text="Roadway,which is about 578.8 km", variable=a3, value=1, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Railway,which is about 503 km", variable=a3, value=2, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Airway,which is about 500 km", variable=a3, value=3, command=a4,
+                        bg="light blue").pack()
+    elif v1 == 5:
+            a3 = IntVar()
+
+            def a4():
+                v2 = int(a3.get())
+                if v2 == 1:
+                    value = StringVar()
+
+                    def a5():
+                        v3 = str(value.get())
+                        if v3 == 'car':
+                            Label(root, text='''if it is petrol, then it would cost around	
+    4,875.2/-
+    if it is diesel, then it would cost around	
+    4,432/-''', bg="light blue").pack()
+                        elif v3 == 'bus':
+                            Label(root, text='''if it is A.C bus, then it would cost around	
+    3,350/-
+    if it is NON-A.C bus, then it would cost around	
+    1,560/-''', bg="light blue").pack()
+                        elif v3 == 'bike':
+                            Label(root, text="it would cost around 2,568.4/-", bg="light blue").pack()
+                        else:
+                            Label(root, text="select anything on list", bg="light blue").pack()
+
+                    OptionMenu(root, value, "car", "bike", "bus").pack()
+                    Button(root, text="click here", command=a5, bg="light blue").pack()
+                elif v2 == 2:
+                    Label(root, text='''if it is A.C, then cost would be around	
+    2,435/-
+    if it is first class, then it would cost around	
+    1,645/-
+    if it is second class, then it would cost around	
+    575/-''', bg="light blue").pack()
+                else:
+                    Label(root, text='''if it is economy class, then it would cost around	
+    3,240/-
+    if it is business class, then it would cost around	
+    60,350/-''', bg="light blue").pack()
+
+            Radiobutton(root, text="Roadway,which is about 1,132 km", variable=a3, value=1, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Railway,which is about 1,339 km", variable=a3, value=2, command=a4,
+                        bg="light blue").pack()
+            Radiobutton(root, text="Airway,which is about 814 km", variable=a3, value=3, command=a4,
+                        bg="light blue").pack()
+
+Button(root,text="click here",command=a2,bg="light blue").pack()
+root.mainloop()
